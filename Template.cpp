@@ -6,7 +6,7 @@
 using namespace std;
 
 const int INF = 0x3f3f3f3f;
-const int LINF = 0x3f3f3f3f3f3f3f3fLL;
+const ll LINF = 0x3f3f3f3f3f3f3f3fLL;
 
 int main(){
 
