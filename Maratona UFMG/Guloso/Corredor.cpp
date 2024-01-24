@@ -12,14 +12,11 @@ const ll LINF = 0x3f3f3f3f3f3f3f3fLL;
 int main(){ _
     int n; cin >> n;
     vector<int> cor(n);
-
-    for (int i=0; i<n; i++){
-        cin >> cor[i];
-    }
-
     int sum=0, ans=0;
 
     for (int i=0; i<n; i++){
+        cin >> cor[i];
+        
         sum += cor[i];
         if (sum < 0) sum = 0;
         if (sum > ans) ans = sum;
