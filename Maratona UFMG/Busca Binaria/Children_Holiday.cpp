@@ -61,7 +61,17 @@ int main(){ _
  
     possible(maxtime);
  
+    int totalballoons = 0;
     for (int i=0; i<n; i++){
-        cout << assis[i][3] << " ";
+        if (totalballoons+assis[i][3] <= m){
+            cout << assis[i][3] << " ";
+            totalballoons += assis[i][3];
+        } else {
+            if (totalballoons == m) cout << 0 << " ";
+            else cout << m-totalballoons << " ";
+            totalballoons = m;
+        }
     }
+
+    cout << endl;
 }
