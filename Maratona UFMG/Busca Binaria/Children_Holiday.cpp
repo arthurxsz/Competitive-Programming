@@ -15,11 +15,7 @@ vector<vector<int>> assis;
 int countmaxballoons(int t, int z, int y, int time){
     int count = time/(z*t+y);
     int remtime = time%(z*t+y);
-    int totalballoons = count*z;
-    if (remtime != 0){
-        if (remtime/t >= z) totalballoons += z;
-        else totalballoons += remtime/t;
-    }
+    int totalballoons = count*z + min(remtime/t, z);
 
     return totalballoons;
 }
