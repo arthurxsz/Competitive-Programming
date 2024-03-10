@@ -17,29 +17,12 @@ int main() {
     cin >> a;
     cin >> b;
 
-    if (a == b) {
-      cout << "YES\n";
-      continue;
-    }
-
     bool yes = false;
 
-    for (int i = 0; i < a.size(); i++) {
-      if (a[i] == '1' && b[i] == '1') {
-        if (a[i - 1] == '0' && b[i - 1] == '0') {
-          yes = true;
-          break;
-        }
-        for (int j = i; j < a.size(); j++) {
-          if (a[j] == '0' && b[j] == '0') {
-            if (a[j + 1] == '1' && b[j + 1] == '1') {
-              yes = true;
-              break;
-            }
-            i = j;
-            break;
-          }
-        }
+    for (int i = 1; i < a.size(); i++) {
+      if (a[i - 1] == '0' && a[i] == '1' && b[i - 1] == '0' && b[i] == '1') {
+        yes = true;
+        break;
       }
     }
 
