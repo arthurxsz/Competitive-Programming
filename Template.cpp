@@ -3,9 +3,10 @@
 #define endl '\n'
 #define int long long
 #define all(x) x.begin(), x.end()
-#define pii pair<int, int>
 
 using namespace std;
+
+typedef pair<int, int> pii;
 
 signed main(){ _
 
