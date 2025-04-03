@@ -13,8 +13,6 @@
 
 using namespace std;
 
-typedef pair<int, int> pii;
-
 signed main(){ fastio
     
 }
